@@ -6,10 +6,11 @@ const convertValues = async () => {
     const realValueText = document.getElementById("real-value-text")
     const currencyValueText = document.getElementById("currency-value-text")
 
-    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(response => response.json())
     const dolar = data.USDBRL.high
     const euro = data.EURBRL.high
     const bitcoin = data.BTCBRL.high
+    const libras = data.GBPBRL.high
     console.log(data);
 
     realValueText.innerHTML = new Intl.NumberFormat('pt-BR', {
@@ -37,6 +38,13 @@ const convertValues = async () => {
             currency: "BTC",
         }).format(inputReais / bitcoin)
     }
+    if (select.value === "£ Libra") {
+
+        currencyValueText.innerHTML = new Intl.NumberFormat('en-GB', {
+            style: 'currency',
+            currency: "GBP",
+        }).format(inputReais / libras)
+    }
 
 }
 changeCurrency = () => {
@@ -50,6 +58,10 @@ changeCurrency = () => {
     if (select.value === "€ Euro") {
         currencyName.innerHTML = "Euro"
         currencyImg.src = "./assetes/Euro.png"
+    }
+    if (select.value === "£ Libra") {
+        currencyName.innerHTML = "Libra"
+        currencyImg.src = "./assetes/libra 1.png"
     }
     if (select.value === "₿ Bitcoin") {
         currencyName.innerHTML = "Bitcoin"

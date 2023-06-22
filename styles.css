@@ -8,27 +8,28 @@
 }
 
 body {
-    background: #E5E5E5;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-    
+    background: black;
+
 }
+
+.imgLogo {
+    width: 375px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+
 
 .container {
     width: 375px;
     background: #F4F4F4;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
 }
 
-header {
-    width: 375px;
-    height: 66px;
-    background: #1B83E2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 h1 {
 
@@ -107,16 +108,16 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:15px;
+    gap: 15px;
 }
 
 .currency-container {
-    
+
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:2px;
+    gap: 2px;
 }
 
 .currency-name {
@@ -126,6 +127,13 @@ section {
 
 .currency-value {
     font-size: 20px;
-   font-weight: bold;
+    font-weight: bold;
     color: #1B83E2;
+}
+
+#currency-img{
+    width: 50px;
+}
+#currency-real{
+    width: 50px;
 }

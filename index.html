@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <title>DevClub Convert Money</title>
+    <title>Convert Money</title>
 </head>
 
 <body>
+
+    <img class="imgLogo" src="./assetes/dolar.gif" alt="Logo">
+
     <div class="container">
-        <header>
-            <h1>DevClub Convert Money</h1>
-        </header>
+
         <main>
             <label>
                 Converter <b>de</b>
@@ -28,7 +29,7 @@
             </label>
             <label>
                 Converter <b>para</b>
-                <Select id= "currency-select">
+                <Select id="currency-select">
                     <option>
                         US$ Dólar Americano
                     </option>
@@ -37,6 +38,9 @@
                     </option>
                     <option>
                         ₿ Bitcoin
+                    </option>
+                    <option>
+                        £ Libra
                     </option>
                 </Select>
             </label>
@@ -48,14 +52,14 @@
 
             <section>
                 <div class="currency-container">
-                    <img src="./assetes/brasil 2.png" alt="bandeira-brasil">
+                    <img src="./assetes/brasil 2.png" id="currency-real" alt="bandeira-brasil">
                     <p class="currency-name">Real</p>
                     <p class="currency-value" id="real-value-text">R$ 0,00</p>
                 </div>
                 <img class="arrow-img" src="./assetes/Group.png" alt="seta">
                 <div class="currency-container">
                     <img src="./assetes/estados-unidos (1) 1.png" id="currency-img" alt="bandeira-de-conversao">
-                    <p class="currency-name"id ="currency-name">Dólar Americano</p>
+                    <p class="currency-name" id="currency-name">Dólar Americano</p>
                     <p class="currency-value" id="currency-value-text">US$ 0,00</p>
                 </div>
 
